@@ -1,0 +1,12 @@
+    body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+  }
+  
+    .day {
+    margin: 1em;
+    padding: 0.25em;
+    border: 1px solid steelblue;
+    background-color: white;
+  }
+ 
