@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="Assets/script.css">
 </head>
 <body>
+    <h1>Gro Pro</h1>
     <header id="top">
 
         <div class="dropdown">
@@ -18,32 +19,33 @@
               <a href="weather api/weather.html">Weather Forecast</a>
             </div>
           </div>
-
-
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="2">Gro Pro</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Perennial</td>
-                    <td>Biennial</td>
-                    <td>Pic</td>
-                    <td>Plant</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1></h1>
     </header>
-    <div>
-        <button id="Plant">
-            Plants
-        </button>
-    </div>
     <main>
+      <div class="top">
+        <button id="go">Random Fact</button>
+      </div>
+      <div class="bottom">
+        <p><span class="fact"></span></p>
+      </div>
     </main>
-    <script src="./Assets/script.js"></script>
+    <script>
+      var buttonEl = document.querySelector('#go');
+
+      buttonEl.addEventListener('click', function(e) {
+        var url = 'https://uselessfacts.jsph.pl/random.json?language=en';
+
+        fetch(url)
+         .then(function(response) {
+          return response.json();
+         })
+         .then(function(data) {
+           console.log(data);
+           var randomFact = document.querySelector('.fact')
+
+           randomFact.innerHTML = data.text;
+         })
+
+      })
+    </script>
 </body>
 </html>
