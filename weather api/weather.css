@@ -1,6 +1,12 @@
     body {
     font-family: sans-serif;
     background-color: whitesmoke;
+    background-image: url("https://img.freepik.com/free-vector/evening-cloudy-sky-purple-background-with-group-cumulus-cirrus-clouds-flat-cartoon-illustration_1284-62768.jpg?w=996&t=st=1675812784~exp=1675813384~hmac=bce1b094070863fe61fb22d1d7b920d93b603e893b21fb6869990f22d8d6a1e0");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
   }
   
     .day {
@@ -10,3 +16,42 @@
     background-color: white;
   }
  
+  #weather {
+    margin-top: 20px;
+  }
+  
+
+
+/* css for menu */
+.menu-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  margin-top: -10px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+.menu a:hover {
+  background-color: #444;
+}
+/* end css for menu */

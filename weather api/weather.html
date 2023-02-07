@@ -5,7 +5,39 @@
   <link rel="stylesheet" type="text/css" href="weather.css">
 </head>
 <body>
+
+  <div class="menu-container">
+
+    <ul class="menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../weather api/weather.html">Weather</a></li>
+      
+      <li><a href="../page1/page1.html">Bienniel's Forum</a></li>
+      <li><a href="../page2/page2.html">Perennial's Forum</a></li>
+    </ul>
+  </div>
+
+  
   <div id="weather"></div>
+
+<form onsubmit="getWeather(longitude.value, latitude.value, location.value); return false;">
+  <input type="text" id="longitude" placeholder="Enter longitude">
+  <input type="text" id="latitude" placeholder="Enter latitude">
+  <input type="text" id="location" placeholder="Enter location name">
+  <button type="submit">Get Weather</button>
+</form>
+
+<div id="weather"></div>
+  <div id="city-select">
+    <h3>Select a City</h3>
+    <button id="minneapolis">Minneapolis, Minnesota, USA</button>
+    <button id="new-york">New York, New York, USA</button>
+    <button id="london">London, England</button>
+  </div>
+  
+
+  
+
   <script src="weather.js"></script>
 </body>
 </html>
